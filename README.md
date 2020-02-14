@@ -1,24 +1,3 @@
-# README
+# My Diary App | Ruby on Rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This simple diary app that allows you to make personal notes of daily events, thoughts & feelings, and whatever you find the need to keep track of. 
