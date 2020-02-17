@@ -1,21 +1,58 @@
 
-$dark_pink: #f77b72;
-$light_pink: #ffd7c4;
-
 
 .navbar {
     width: 100%;
-    height: 3rem;
+    height: 4rem;
     display: block;
-    background-color: $light_pink;
+    background-color: $dark_pink;
+    position: absolute;
+
 }
+
 
 .logo {
+    position: relative;
+    top: 0.5rem;
     font-size: 2rem;
+    margin-left: 2rem;
 }
 
-a, .button {
+.navlinks {
+    float: right;
+    margin-right: 2rem;
+    margin-top: 0.8rem;
+    font-size: 1.5rem;
+}
+
+.nav-item {
+
+    &:not(:last-child) {
+        margin-right: 1rem;
+    }
+}
+
+a {
     color: white;
     text-decoration: none;
+}
+
+.button {
+    background-color: $dark_pink;
+    padding: 0.5rem 1.5rem;
+    border-radius: 2rem;
+    display: inline-block;
+    transition: all 0.2s;
+
+    &:hover {
+        transform: translateY(-0.3rem);
+        box-shadow: 5px 5px 15px rgba(black, 0.2);
+    }
+
+    &:active {
+        transform: translateY(0);
+        box-shadow: 3px 3px 5px rgba(black, 0.5);
+
+    }
+
 }
 

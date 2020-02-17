@@ -2,6 +2,11 @@
  *= require_self
  */
 
+ /* ---- Color Variables ---- */
+
+ $dark_pink: #f77b72;
+ $light_pink: #ffd7c4;
+
  @import "normalize.css.scss";
  @import "global.css.scss";
  @import "notes.css.scss";

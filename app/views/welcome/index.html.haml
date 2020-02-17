@@ -1,8 +1,4 @@
-.container
-    %h1 Welcome to My Diary App
-    %p The only diary app you need
-
--# .navbar
--#     = link_to "Logo" 
--#     = link_to "Sign Up", new_user_registration_path, class: "button"
--#     = link_to "Log in", new_user_session_path, class: "button"
+.header
+    %h1{:class => 'header__content--title'} Welcome to My Diary App
+    %p{:class => 'header__content--secondary'} The only diary app you need
+    = link_to "Sign Up", new_user_registration_path, class: "button"
