@@ -1,5 +1,9 @@
+- if @notes.empty?
+    %h1{:class => "primary top-padding"} You do not have any diary entries 
+
 - @notes.each do |note|
     = link_to note.title, note_path(note)
     %p=  note.created_at.strftime("%b %d, %Y - %l:%M %P")
 
-= link_to "New Diary Entry", new_note_path
+.container
+    = link_to "New Diary Entry", new_note_path, class: "button"

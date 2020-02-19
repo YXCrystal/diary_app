@@ -1,4 +1,5 @@
 .header
-    %h1{:class => 'header__content--title'} Welcome to My Diary App
-    %p{:class => 'header__content--secondary'} The only diary app you need
-    = link_to "Sign Up", new_user_registration_path, class: "button"
+    .header__content
+        %h1{:class => 'primary'} Welcome to My Diary App
+        %p{:class => 'secondary'} The only diary app you need
+        = link_to "Sign Up", new_user_registration_path, class: "button"

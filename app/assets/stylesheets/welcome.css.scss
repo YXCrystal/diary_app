@@ -14,11 +14,10 @@
         color: rgba(black, 0.8);
         font-size: 1.4rem;
         text-align: center;
-        padding-top: 14rem;
-
-        &--secondary {
-            margin-top: -1rem;
-            padding-bottom: 1.5rem;
-        }
+        display: inline-block;
+        margin-top: 12rem;
+        margin-left: 50%;
+        transform: translate(-50%);
+        
     }
 }
