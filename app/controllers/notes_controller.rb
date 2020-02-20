@@ -3,7 +3,7 @@ class NotesController < ApplicationController
     before_action :find_note, only: [:show, :edit, :update, :destroy]
 
     def index
-        @notes = Note.where(user_id: current_user)
+        @notes = Note.where(user_id: current_user).order("created_at DESC")
     end
 
     def new
@@ -49,7 +49,7 @@ class NotesController < ApplicationController
     end
 
     def note_params
-        params.require(:note).permit(:title, :content)
+        params.require(:note).permit(:title, :content, :image)
     end
 
 end
