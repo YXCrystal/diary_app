@@ -1,3 +1,78 @@
 // Place all the styles related to the Notes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* ------------- grid  ------------ */
+
+
+.row {
+    display: inline-grid;
+    grid-template-columns: 30rem 30rem 30rem;
+    grid-auto-rows: 25rem;
+    text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    column-gap: 3rem;
+    max-width: 100%;
+    
+}
+
+.col {
+    background-position: center;
+    background-size: cover;
+    background-color: $dark_pink;
+    box-shadow: 1px 1px 5px black;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    position: relative;
+    z-index: 1;
+    transition: all 0.2s;
+
+    &:hover {
+        box-shadow: 1px 1px 20px black;
+        transform: scale(1.09);
+        z-index: 10;
+
+    }
+
+}
+
+/* -------------- notes styling ------------ */
+
+.time {
+    color: white;
+    position: absolute;
+    padding-top: 1rem;
+    bottom: 0;
+    right: 2rem;
+}
+
+.content {
+    color: $light_grey;
+
+    hr {
+        width: 80%;
+    }
+
+    p {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+        white-space: pre-line;
+    }
+}
+
+.image {
+    width: 100%;
+}
+
+.title {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    white-space: pre-line;
+}

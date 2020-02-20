@@ -2,10 +2,27 @@
 
 .container {
     text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
+.small-top-margin {
+    margin-top: 2rem;
 }
 
 .top-padding {
     padding-top: 8rem;
+}
+
+.small-top-padding {
+    padding-top: 3rem;
+}
+
+.bottom-padding {
+    padding-bottom: 8rem;
+}
+
+.small-bottom-padding {
+    padding-bottom: 2rem
 }
 
 /* -------- navbar styles ------------ */
@@ -78,19 +95,21 @@ a {
     text-align: center;
     font-size: 3rem;
     color: $dark_grey;
+
 }
 
 .secondary {
     margin-top: -1rem;
     font-size: 1.5rem;
     color: $light_grey;
+    font-weight: 400;
 }
 
 /* ------------ form styles ------------- */
 
 .form {
     margin: 0 auto;
-    width: 25%;
+    width: 35%;
     padding-top: 3rem;
 
     &-actions {
@@ -101,11 +120,19 @@ a {
 
 input[type="text"], input[type="email"], input[type="password"], textarea {
 	width: 100%;
-    margin-bottom: 1rem;
-    padding-left: 0.5rem;
+    margin-bottom: 2rem;
+    padding: 0.5rem;
 	border: 1px solid $light_grey;
     border-radius: .4rem;
     height: 2rem;
+}
+
+label {
+    color: $dark_pink;
+    font-size: 1.5rem;
+    display: block;
+    margin-bottom: 0.5rem;
+    
 }
 
 abbr {
@@ -113,7 +140,7 @@ abbr {
 }
 
 textarea {
-    height: 20rem;
+    height: 15rem;
 }
 
 .error_notification,  .error {
@@ -125,11 +152,10 @@ textarea {
 .notification {
     text-align: center;
     background-color: rgba($dark_pink, 0.4);
-    height: 4rem;
-    display: inline-block;
     width: 100%;
     color: white;
     font-size: 1.5rem;
     transition: all 0.2;
+    display: inline-block;
 
 }
