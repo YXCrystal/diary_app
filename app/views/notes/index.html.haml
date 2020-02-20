@@ -1,9 +1,15 @@
 - if @notes.empty?
     %h1{:class => "primary top-padding"} You do not have any diary entries 
+    .form-actions
+        = link_to "New Diary Entry", new_note_path, class: "button"
 
-- @notes.each do |note|
-    = link_to note.title, note_path(note)
-    %p=  note.created_at.strftime("%b %d, %Y - %l:%M %P")
+.row.top-padding.bottom-padding
+    - @notes.each do |note|
+        .col{:style => "background-image: linear-gradient(to bottom, rgba(255,255,255, 0.7), rgba(247, 123, 114, 0.7)), url(#{note.image.url})"}
+            %h1= link_to note.title, note_path(note), class: "primary title"
+            .content
+                %hr
+                %p{:class => "secondary"}= simple_format(note.content)
+            %p{:class => "time"}=  note.created_at.strftime("%b %d, %Y")
 
-.container
-    = link_to "New Diary Entry", new_note_path, class: "button"
+

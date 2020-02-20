@@ -1,6 +1,7 @@
-= simple_form_for @note do |f|
+= simple_form_for @note, html: {multipart: true} do |f|
     = f.input :title
     = f.input :content
+    = f.input :image, as: :file 
     .form-actions
-        = f.submit 'Submit', class: "button"
-        = link_to "Back", notes_path, class: "button"
+        = f.submit 'Submit', class: "button small-top-margin"
+        = link_to "Back", notes_path, class: "button small-top-margin"

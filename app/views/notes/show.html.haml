@@ -1,6 +1,12 @@
-%h1= @note.title
-%p= @note.content
+.container 
+    .small-top-padding
+    %h1{:class => "primary"}= @note.title
+    - if @note.image.exists?
+        = image_tag @note.image.url(:large), class: "image"
+    .secondary.small-top-padding.small-bottom-padding
+        %p= simple_format(@note.content)
 
-= link_to "Back", notes_path
-= link_to "Edit", edit_note_path(@note)
-= link_to "Delete", note_path(@note), method: :delete, data: {confirm: "Are you sure?"}
+    .bottom-padding
+        = link_to "Back", notes_path, class: "button"
+        = link_to "Edit", edit_note_path(@note), class: "button"
+        = link_to "Delete", note_path(@note), method: :delete, data: {confirm: "Are you sure?"}, class: "button"
