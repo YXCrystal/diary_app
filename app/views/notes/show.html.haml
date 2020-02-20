@@ -2,7 +2,7 @@
     .small-top-padding
     %h1{:class => "primary"}= @note.title
     - if @note.image.exists?
-        = image_tag @note.image.url(:large), class: "image"
+        = image_tag @note.image.url(:large)
     .secondary.small-top-padding.small-bottom-padding
         %p= simple_format(@note.content)
 
